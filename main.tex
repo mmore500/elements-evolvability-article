@@ -1,0 +1,57 @@
+%\title{Elements Evolvability Article}
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{ifpdf}
+\usepackage{mla}
+\usepackage{sidecap}
+\usepackage{setspace}
+\usepackage{subcaption}
+\usepackage{csquotes}
+\usepackage{mathptmx}
+
+\usepackage{titlesec}
+\titleformat{\section}
+  {\normalfont\large\raggedright}{\thesection.}{1em}{}
+\titlespacing\section{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+
+\usepackage[nomarkers,figuresonly,nolists]{endfloat}
+\DeclareDelayedFloatFlavour{SCfigure}{figure}
+
+\usepackage{etoolbox}
+\appto\displayquote{\singlespacing}
+
+\renewcommand{\efloatseparator}{\mbox{}}
+\newcommand{\inputandref}[1]{\input{fig/#1.tex}\ref{fig:#1}}
+
+\setlength{\parindent}{0.25cm}
+\setlength{\parskip}{0em}
+
+\makeatletter
+\title{Evolvability: What Is It and How Do We Get It?}\let\Title\@title
+\author{Matthew Moreno}
+\makeatother
+
+% keep all footnotes on the same page
+\interfootnotelinepenalty=10000
+
+\begin{document}
+
+\begin{mla}{Matthew}{Moreno}{Chambers}{CSCI 491}{\date}{{\large \Title}\vspace{-1ex}}
+
+\input{tex/intro.tex}
+
+\input{tex/heritable_variation.tex}
+
+\input{tex/useful_variation.tex}
+
+\input{tex/conclusion.tex}
+
+\newpage
+\bibliography{Mendeley}
+\bibliographystyle{apalike}
+
+
+\end{mla}
+
+\end{document}
+
